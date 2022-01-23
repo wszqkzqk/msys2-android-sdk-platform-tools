@@ -17,6 +17,11 @@ sha256sums=('0f4b8fdd26af2c3733539d6eebb3c2ed499ea1d4bb1f4e0ecc2d6016961a6e24'
 
 package() {
   # 使用系统的libwinpthread-1.dll，不要复制 "${srcdir}/platform-tools/libwinpthread-1.dll"
+  mkdir "${pkgdir}/usr"
+  mkdir "${pkgdir}/usr/share"
+  mkdir "${pkgdir}/usr/share/licenses"
+  mkdir "${pkgdir}/usr/share/licenses/${pkgname}"
+  mkdir "${pkgdir}/usr/bin"
   cp "${srcdir}/license.html" "${pkgdir}/usr/share/licenses/${pkgname}/license.html"
   chmod -R +rX "${srcdir}/platform-tools/*.exe"
   cp "${srcdir}/platform-tools/adb.exe" "${pkgdir}/usr/bin/adb.exe"
