@@ -21,9 +21,10 @@ package() {
   mkdir "${pkgdir}/usr/share"
   mkdir "${pkgdir}/usr/share/licenses"
   mkdir "${pkgdir}/usr/share/licenses/${pkgname}"
+  mkdir "${pkgdir}/usr/share/${pkgname}"
   mkdir "${pkgdir}/usr/bin"
   cp "${srcdir}/license.html" "${pkgdir}/usr/share/licenses/${pkgname}/license.html"
-  chmod -R +rX "${srcdir}/platform-tools/*.exe"
+  chmod -R +rX "${srcdir}"/platform-tools/*.exe
   cp "${srcdir}/platform-tools/adb.exe" "${pkgdir}/usr/bin/adb.exe"
   cp "${srcdir}/platform-tools/AdbWinApi.dll" "${pkgdir}/usr/bin/AdbWinApi.dll"
   cp "${srcdir}/platform-tools/AdbWinUsbApi.dll" "${pkgdir}/usr/bin/AdbWinUsbApi.dll"
