@@ -1,0 +1,18 @@
+pkgbase = msys2-android-sdk-platform-tools
+	pkgdesc = Platform-Tools for Google Android SDK (adb and fastboot)
+	pkgver = 31.0.3
+	pkgrel = 1
+	url = http://developer.android.com/sdk/index.html
+	arch = x86_64
+	license = custom
+	depends = zlib
+	depends = ncurses
+	provides = adb
+	provides = android-tools
+	conflicts = adb
+	source = https://dl.google.com/android/repository/platform-tools_r31.0.3-windows.zip
+	source = license.html
+	sha256sums = 0f4b8fdd26af2c3733539d6eebb3c2ed499ea1d4bb1f4e0ecc2d6016961a6e24
+	sha256sums = a7f3a259290ae6a5dc61bd34ecae36e2b7e2f644865ddc3c7fde5d248b8a7cef
+
+pkgname = msys2-android-sdk-platform-tools
